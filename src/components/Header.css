@@ -1,0 +1,38 @@
+.Navbar_item {
+    margin: 0;
+    padding: 0;
+  }
+  .Navbar_title {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .Navbar_active .Navbar_title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .Navbar_active .Navbar_icon {
+    color: #fff;
+  }
+  .Navbar_active .dropdown-toggle:after {
+    color: #fff;
+  }
+  @media (min-width: 768px) {
+    .navbar-expand-md .navbar-light .nav-item.active:after {
+      border-bottom-width: 0px;
+    }
+    .navbar-expand-md .navbar-nav .nav-link {
+      padding-right: 1.75rem;
+      padding-left: .45rem;
+    }
+  }
+  .Navbar_dark {
+    background: #45CFDD;
+    color: #fff;
+  }
+  .Navbar_avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 30px;
+    border: solid 2px #45CFDD;
+  }
