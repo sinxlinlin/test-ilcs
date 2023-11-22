@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Select from 'react-select';
 import Swal from 'sweetalert2';
+import axios from 'axios';
 
 // Component
 import Header from './components/Header';
@@ -12,14 +13,15 @@ import { baseAPI } from './services/baseAPI';
 
 function App() {
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [listKode, setListKode] = useState([
-    {label: "10079000", value: "10079000"}
+    {label: "Butiran sorghum. - Lain-lain (10079000)", value: "10079000"}
   ])
   const [dataBarang, setDataBarang] = useState({
     kode_barang: null,
     nilai_komoditas: null
   })
+
 
   const storeDataBarang = async () => {   
     setIsLoading(true);
@@ -112,7 +114,7 @@ function App() {
     <Header />
     <ScrollToTop />
     <div className='content'>
-      {addView()}
+      {isLoading ? <LoadingView /> : addView()}
     </div>
   </>
   );
