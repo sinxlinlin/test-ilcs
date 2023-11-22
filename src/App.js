@@ -92,7 +92,7 @@ function App() {
 
               <div className='col-md-12'>
                 <button
-                  disabled={dataBarang.kode_barang !== "" && dataBarang.nilai_komoditas !== "" ? false : true}
+                  disabled={dataBarang.kode_barang !== null && dataBarang.nilai_komoditas !== null ? false : true}
                   type="button"
                   className='btn btn-primary col-md-12'
                   style={{backgroundColor: '#45CFDD'}}
